@@ -15,4 +15,4 @@ venv_*
 # Python cache
 __pycache__/
 *.py[cod]
-
+mitsui-commodity-prediction-challenge/
