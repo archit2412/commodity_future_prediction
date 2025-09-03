@@ -1,0 +1,18 @@
+# Environment files
+.env
+
+# Dataset folders
+dataset/
+data/
+datasets/
+
+# Virtual environments
+venv/
+env/
+.venv/
+venv_* 
+
+# Python cache
+__pycache__/
+*.py[cod]
+mitsui-commodity-prediction-challenge/
