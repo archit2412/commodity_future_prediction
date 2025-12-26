@@ -76,11 +76,11 @@ for i, target_name in enumerate(target_list):
             'random_state': 42,
             'verbose': -1,
             # keep n_jobs small during CV to avoid nested parallelism issues
-            'n_jobs': -1
+            'n_jobs': 1
         }
         model = LGBMRegressor(**params)
         # use 3-fold CV like before; return mean MSE
-        scores = cross_val_score(model, X_train, y_train, cv=3, scoring='neg_mean_squared_error', n_jobs=-1)
+        scores = cross_val_score(model, X_train, y_train, cv=3, scoring='neg_mean_squared_error', n_jobs=1)
         return -scores.mean()
 
     study = optuna.create_study(direction='minimize', sampler=optuna.samplers.TPESampler(seed=42))

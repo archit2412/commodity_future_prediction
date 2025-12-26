@@ -37,3 +37,16 @@ The competition involves building robust models to **predict commodity returns a
 ---
 
 *This repository is purely for learning and practice purposes and is not intended as a polished solution.*
+
+## 🧪 Agents
+
+This project includes a lightweight **Research Agent** that extracts concise research summaries from model artifacts and evaluation outputs.
+
+Quick example:
+
+```bash
+python scripts/run_research_agent.py --predictions path/to/preds.csv --out reports/research_report.json
+```
+
+The agent expects a predictions CSV with `y_true` and `y_pred` columns and will write a JSON and Markdown summary to the `--out` path (and `<out>.md`).
+
